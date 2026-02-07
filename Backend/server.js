@@ -214,9 +214,10 @@ const start = async ()=>{
     try {
         await fastify.listen({port: process.env.PORT || 5000, host:"0.0.0.0"});
         console.log("server running");
-        host: "0.0.0.0",
-        
-    } catch (error) {
+        host: "0.0.0.0";
+    }
+
+     catch (error) {
         fastify.log.error(error);
         process.exit(1);
     }
